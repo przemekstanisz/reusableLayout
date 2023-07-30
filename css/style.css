@@ -18,11 +18,17 @@ img {
     --TEXT: #282828;
     --BG: #e5e5e5;
     --PR: #d7d7d7;
-    --SC: #d25959;
-    --AC: #711c1c;
+    --SC: #bcbcbc;
+    --AC: #5e5e5e;
     /* FONTS */
     --TIT: 'Oswald', sans-serif;
     --TXT: 'Source Sans 3', sans-serif;
+    /* BORDERS */
+    --BRD: 1px solid var(--AC);
+    --BRAC: 3px solid var(--AC);
+    --BRR: 1rem;
+    /* SHADOWS */
+    --SHD: 0 5px 10px var(--AC);
 }
 
 body {
@@ -43,6 +49,7 @@ nav {
     top: 0;
     background-color: var(--AC);
     width: 100%;
+    box-shadow: var(--SHD);
 }
 
 nav ul {
@@ -88,10 +95,68 @@ nav a {
     width: 100%;
     padding: 1rem;
     text-align: center;
+    font-weight: 100;
 }
 
 nav a:hover,
 nav a:active {
     color: var(--AC);
     background-color: var(--SC);
+}
+
+article {
+    background-color: var(--PR);
+    border: var(--BRD);
+    border-radius: var(--BRR);
+    box-shadow: var(--SHD);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    width: 75%;
+    margin: 5rem auto;
+}
+
+.hero__card {
+    display: flex;
+    gap: 3rem;
+    padding: 3rem;
+}
+
+.hero__cta {
+    font-size: 1.5rem;
+    flex-shrink: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.hero__text {
+    text-align: justify;
+}
+
+.hero__pic {
+    border-radius: var(--BRR);
+}
+
+.hero__btnBox {
+    display: flex;
+    gap: 2rem;
+}
+
+.hero__btn {
+    border: var(--BRD);
+    border-radius: var(--BRR);
+    display: block;
+    width: 50%;
+    padding: 1rem;
+    font-family: var(--TIT);
+    font-size: 1.2rem;
+}
+
+.hero__btn:hover {
+    box-shadow: var(--SHD);
+}
+
+.hero__btn--dark {
+    background-color: var(--AC);
 }
