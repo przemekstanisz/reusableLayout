@@ -25,7 +25,7 @@ img {
     --TXT: 'Source Sans 3', sans-serif;
     /* BORDERS */
     --BRD: 1px solid var(--AC);
-    --BRAC: 3px solid var(--AC);
+    --BRAC: 3px solid var(--BG);
     --BRR: 1rem;
     /* SHADOWS */
     --SHD: 0 5px 10px var(--AC);
@@ -151,6 +151,7 @@ article {
     padding: 1rem;
     font-family: var(--TIT);
     font-size: 1.2rem;
+    background-color: var(--SC);
 }
 
 .hero__btn:hover {
@@ -159,4 +160,6 @@ article {
 
 .hero__btn--dark {
     background-color: var(--AC);
+    border: var(--BRAC);
+    color: var(--BG);
 }
